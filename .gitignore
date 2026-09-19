@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# 环境变量
+.env
+
+# 运行时产物
+reports.db
+*.db
+output/
+.streamlit/secrets.toml
+
+# 编辑器 / 系统
+.idea/
+.vscode/
+.DS_Store
