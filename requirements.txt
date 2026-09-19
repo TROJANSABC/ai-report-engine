@@ -1,0 +1,19 @@
+# 前端
+streamlit>=1.30
+
+# 搜索
+tavily-python>=0.3.0
+requests>=2.31
+feedparser>=6.0
+
+# LLM
+openai>=1.30
+anthropic>=0.30
+
+# 模板与导出
+Jinja2>=3.1
+markdown>=3.5
+weasyprint>=61.0
+
+# 配置
+python-dotenv>=1.0
