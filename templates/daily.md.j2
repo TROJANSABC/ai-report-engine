@@ -1,0 +1,21 @@
+# {{ topic }} · 日报
+
+> {{ report_name }} | 生成日期：{{ date }}
+
+## 一、今日摘要
+{{ analysis.summary }}
+
+## 二、重要动态
+{% for e in analysis.events -%}
+- **{{ e.title }}**：{{ e.detail }}
+{% endfor %}
+
+## 三、数据速览
+{% for d in analysis.data_points -%}
+- {{ d.metric }}：{{ d.value }}（置信度 {{ d.confidence }}）
+{% endfor %}
+
+## 四、值得关注
+{% for t in analysis.trends -%}
+- {{ t.trend }}
+{% endfor %}
