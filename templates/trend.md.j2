@@ -1,0 +1,26 @@
+# {{ topic }} · 趋势简报
+
+> {{ report_name }} | 生成日期：{{ date }}
+
+## 一、趋势定义
+{{ analysis.summary }}
+
+## 二、支撑证据
+{% for e in analysis.events -%}
+- {{ e.title }}：{{ e.detail }}
+{% endfor %}
+
+## 三、驱动因素
+{% for d in analysis.data_points -%}
+- {{ d.metric }}：{{ d.value }}（{{ d.agreement }}）
+{% endfor %}
+
+## 四、潜在影响
+{% for o in analysis.opinions -%}
+- {{ o.viewpoint }}
+{% endfor %}
+
+## 五、风险与不确定性
+{% for t in analysis.trends -%}
+- {{ t.trend }}（依据：{{ t.evidence }}）
+{% endfor %}
