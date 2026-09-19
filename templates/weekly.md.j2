@@ -1,0 +1,29 @@
+# {{ topic }} · 周报
+
+> {{ report_name }} | 生成日期：{{ date }}
+
+## 一、本周概览
+{{ analysis.summary }}
+
+## 二、重点事件
+{% for e in analysis.events -%}
+- **{{ e.title }}**：{{ e.detail }}
+{% endfor %}
+
+## 三、关键数据
+{% for d in analysis.data_points -%}
+- **{{ d.metric }}**：{{ d.value }} ｜ 置信度：{{ d.confidence }} ｜ {{ d.agreement }}
+{% endfor %}
+
+## 四、观点与讨论
+{% for o in analysis.opinions -%}
+- {{ o.viewpoint }}
+{% endfor %}
+
+## 五、趋势判断
+{% for t in analysis.trends -%}
+- **{{ t.trend }}**（依据：{{ t.evidence }}）
+{% endfor %}
+
+## 六、下周关注
+- 待补充
